@@ -1,0 +1,23 @@
+.title {
+    @include font-style(900, 48px, normal, 1.44px);
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 28px;
+        height: 15px;
+        background-color: $blue-color;
+        position: absolute;
+        top: -29px;
+        left: 0;
+        transform: skewX(-30deg) rotate(-30deg);
+    }
+}
+
+@media (max-width: 760px) {
+    .title {
+        font-size: 30px;
+        letter-spacing: 1.29px;
+    }
+}

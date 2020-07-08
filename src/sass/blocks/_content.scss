@@ -1,0 +1,94 @@
+.content {
+    height: 1380px;
+    background-color: $main-color;
+
+    &__wrap {
+        padding-top: 190px;
+    }
+
+    &__bg {
+        background-image: url(../img/Symbol_Logo.png);
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    &__title {
+        color: $white-color;
+    }
+
+    &__blocks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        grid-gap: 107px;
+        padding: 120px 100px;
+    }
+}
+
+.block {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1.5s ease;
+
+    &.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &__icon {
+        width: 53px;
+        height: 53px;
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        @include font-style(700, 32px, normal, 0.64px);
+        color: $white-color;
+        margin-bottom: 51px;
+    }
+
+    &__text {
+        @include font-style(300, 18px, 28px, 0.36px);
+        color: $text-color;
+    }
+}
+
+@media (max-width: 1199px) {
+    .content {
+        .content__blocks {
+            padding: 120px 50px;
+            grid-gap: 50px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .content {
+        .content__wrap {
+            padding-top: 134px;
+        }
+    
+        .content__blocks {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 48px;
+            padding: 49px 0 84px 0;
+        }
+        
+        .block {
+            &__icon {
+                margin-bottom: 17px;
+            }
+    
+            &__title {
+                font-size: 22px;
+                margin-bottom: 35px;
+            }
+    
+            &__text {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.46px;
+            }
+        }
+    }
+}

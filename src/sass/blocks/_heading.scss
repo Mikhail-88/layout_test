@@ -1,0 +1,16 @@
+.heading {
+  height: 600px;
+  background-color: $bg-color;
+  padding-top: 380px;
+
+  &__title {
+    color: $main-color;
+  }
+}
+
+@media (max-width: 540px) {
+  .heading {
+    height: 650px;
+    padding-top: 500px;
+  }
+}
